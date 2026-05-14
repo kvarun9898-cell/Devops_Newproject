@@ -1,0 +1,32 @@
+pipeline { 
+    agent any 
+ 
+    stages { 
+ 
+        stage('Checkout') { 
+            steps { 
+                git 'https://github.com/kvarun9898-cell/Devops_Newproject.git' 
+            } 
+        } 
+ 
+        stage('Build') { 
+            steps { 
+                sh 'echo Build Started' 
+            } 
+        } 
+ 
+        stage('Test') { 
+            steps { 
+                sh 'echo Test Successful' 
+            } 
+        } 
+ 
+        stage('Deploy') { 
+            steps { 
+                sh 'echo Deployment Completed' 
+            } 
+        } 
+    } 
+} 
+
+ 
